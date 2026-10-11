@@ -18,6 +18,8 @@ slots, trucks and shifts can be planned.
 | Live problems caught | sudden customer changes detected in the **first week** by bias monitoring |
 | Retraining | monthly retraining + gate kept: accuracy ~equal to never retraining (recent-history features adapt), but removes the slow drift into under-forecasting (−1.6% → −0.3%) |
 
+![Model contest leaderboard](reports/figures/s3_leaderboard.png)
+
 ## The 9 stages
 
 | # | Stage | What it does | Tools | Write-up |
