@@ -1,0 +1,47 @@
+{
+ "budget_false_alarms_per_site_year": 0.5,
+ "calibration_seeds": [
+  1000,
+  2000,
+  3000,
+  4000,
+  5000
+ ],
+ "test_seeds": [
+  6000,
+  7000,
+  8000,
+  9000,
+  10000
+ ],
+ "chosen": {
+  "outlier_low_ratio": 0.5,
+  "outlier_min_gap_share": 0.05,
+  "outlier_high_ratio": 3.0,
+  "outlier_high_ratio_near_holiday": 10.0
+ },
+ "calibration": {
+  "recall": 0.8679245283018868,
+  "recall_weekday": 0.875,
+  "recall_weekend": 0.8461538461538461,
+  "n_pos": 53,
+  "false_low_per_site_year": 0.4789715249156988,
+  "high_per_site_year": 0.4516017234919446
+ },
+ "test": {
+  "recall": 1.0,
+  "recall_weekday": 1.0,
+  "recall_weekend": 1.0,
+  "n_pos": 55,
+  "false_low_per_site_year": 0.08210940427126265,
+  "high_per_site_year": 0.21895841139003375
+ },
+ "current_config_on_test": {
+  "recall": 0.9272727272727272,
+  "recall_weekday": 1.0,
+  "recall_weekend": 0.7333333333333333,
+  "n_pos": 55,
+  "false_low_per_site_year": 0.09579430498313976,
+  "high_per_site_year": 0.30106781566129637
+ }
+}

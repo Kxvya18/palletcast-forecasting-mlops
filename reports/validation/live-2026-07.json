@@ -1,0 +1,19 @@
+{
+ "batch": "live-2026-07",
+ "status": "pass",
+ "rows_in": 6797,
+ "rows_clean": 6766,
+ "exact_duplicates_dropped": 14,
+ "superseded_by_correction": 22,
+ "quarantined": 17,
+ "quarantine_rate": 0.0025,
+ "quarantine_reasons": {
+  "order_before_ship": 6,
+  "site_customer_pair_known": 4,
+  "pallets:greater_than": 4,
+  "customer_id:isin": 3
+ },
+ "errors": [],
+ "warnings_by_type": {},
+ "warnings": []
+}

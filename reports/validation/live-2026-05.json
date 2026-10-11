@@ -1,0 +1,34 @@
+{
+ "batch": "live-2026-05",
+ "status": "warn",
+ "rows_in": 6206,
+ "rows_clean": 6188,
+ "exact_duplicates_dropped": 8,
+ "superseded_by_correction": 16,
+ "quarantined": 10,
+ "quarantine_rate": 0.00161,
+ "quarantine_reasons": {
+  "pallets:greater_than": 4,
+  "site_customer_pair_known": 2,
+  "site_id:not_nullable": 1,
+  "customer_id:not_nullable": 1,
+  "customer_id:isin": 1,
+  "order_before_ship": 1
+ },
+ "errors": [],
+ "warnings_by_type": {
+  "volume_low": 1
+ },
+ "warnings": [
+  {
+   "type": "volume_low",
+   "site_id": "S03",
+   "date": "2026-05-19",
+   "pallets": 425,
+   "ref_median": 2253,
+   "ratio": 0.189,
+   "gap_share": 0.881,
+   "near_holiday": false
+  }
+ ]
+}

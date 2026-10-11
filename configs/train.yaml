@@ -1,0 +1,14 @@
+# S3 backtest settings. Rationale: docs/s3_training.md
+
+tune_fold: {name: tune_2024Q4, start: "2024-10-01", end: "2024-12-31"}
+test_folds:
+  - {name: 2025Q1, start: "2025-01-01", end: "2025-03-31"}
+  - {name: 2025Q2, start: "2025-04-01", end: "2025-06-30"}
+  - {name: 2025Q3, start: "2025-07-01", end: "2025-09-30"}
+  - {name: 2025Q4, start: "2025-10-01", end: "2025-12-31"}
+last_target_date: "2025-12-31"   # 2026 is reserved for S7/S8
+label_settle_days: 21            # train only on labels that were final at the fold start
+eval_origin_weekdays: [0, 3]     # leaderboard: forecasts made on Mondays and Thursdays
+tuning_trials: 10                # same budget for every tunable model
+seeds: [0, 1, 2]
+peak_quantile: 0.9               # "peak day" = top 10% of a site's volume in the test set

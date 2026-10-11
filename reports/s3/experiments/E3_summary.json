@@ -1,0 +1,25 @@
+{
+ "summary": [
+  {
+   "variant": "honest_train_honest_live",
+   "wape": 0.12437,
+   "bias": -0.03343,
+   "wape_peak": 0.1858,
+   "wape_seed_sd": 0.00049
+  },
+  {
+   "variant": "naive_train_honest_live",
+   "wape": 0.12402,
+   "bias": -0.03692,
+   "wape_peak": 0.18772,
+   "wape_seed_sd": 0.00012
+  },
+  {
+   "variant": "naive_train_naive_test",
+   "wape": 0.12385,
+   "bias": -0.03339,
+   "wape_peak": 0.18572,
+   "wape_seed_sd": 0.00018
+  }
+ ]
+}

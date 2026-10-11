@@ -1,0 +1,18 @@
+{
+ "summary": [
+  {
+   "variant": "imputed",
+   "wape": 0.12418,
+   "bias": -0.03259,
+   "wape_peak": 0.18562,
+   "wape_seed_sd": 0.00057
+  },
+  {
+   "variant": "masked",
+   "wape": 0.12437,
+   "bias": -0.03343,
+   "wape_peak": 0.1858,
+   "wape_seed_sd": 0.00049
+  }
+ ]
+}

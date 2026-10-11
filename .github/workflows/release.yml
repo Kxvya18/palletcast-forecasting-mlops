@@ -1,0 +1,29 @@
+name: release
+
+# Runs only when a version tag is pushed (e.g. `git tag v1.0 && git push --tags`).
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # In a team setup the container loads the production model from a shared MLflow
+      # server at start-up (set MODEL_URI / MLFLOW_TRACKING_URI), so the image holds code only.
+      - run: mkdir -p serving_model
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push ghcr.io/<owner>/palletcast-forecast:<tag>
+        run: |
+          IMAGE=ghcr.io/$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')/palletcast-forecast:${{ github.ref_name }}
+          docker build -t "$IMAGE" .
+          docker push "$IMAGE"

@@ -1,0 +1,25 @@
+{
+ "run_date": "2026-04-01",
+ "holdout": [
+  "2026-02-11",
+  "2026-03-11"
+ ],
+ "candidate": {
+  "wape": 0.11287246747189157,
+  "bias": -0.023673537832439234,
+  "wape_peak": 0.15991574334866937,
+  "n": 1400
+ },
+ "production_version": 6,
+ "production": {
+  "wape": 0.11404160575734365,
+  "bias": -0.02365291734697193,
+  "wape_peak": 0.1611511621511477,
+  "n": 1400
+ },
+ "wape_ok": true,
+ "bias_ok": true,
+ "promote": true,
+ "reason": "passes gate",
+ "new_version": "7"
+}

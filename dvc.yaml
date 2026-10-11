@@ -1,0 +1,39 @@
+stages:
+  generate:
+    cmd: python -m palletcast.data.make_dataset --config configs/data.yaml --out data
+    deps:
+      - configs/data.yaml
+      - src/palletcast/data/simulate.py
+      - src/palletcast/data/faults.py
+      - src/palletcast/data/make_dataset.py
+    outs:
+      - data/raw
+      - data/sim_truth
+  validate:
+    cmd: python -m palletcast.data.validate --config configs/data.yaml --raw data/raw --out data/validated --reports reports/validation
+    deps:
+      - configs/data.yaml
+      - data/raw
+      - src/palletcast/data/validate.py
+      - src/palletcast/data/schemas.py
+    outs:
+      - data/validated
+      - reports/validation:
+          cache: false
+  promo_lead:
+    cmd: python -m palletcast.features.promo_lead --validated data/validated --out reports/features
+    deps:
+      - data/validated
+      - src/palletcast/features/promo_lead.py
+    outs:
+      - reports/features/promo_lead.json:
+          cache: false
+  features:
+    cmd: python -m palletcast.features.build --config configs/features.yaml --validated data/validated --out data/features
+    deps:
+      - configs/features.yaml
+      - data/validated
+      - src/palletcast/features/asof.py
+      - src/palletcast/features/build.py
+    outs:
+      - data/features

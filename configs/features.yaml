@@ -1,0 +1,17 @@
+# Feature pipeline (S2). Rationale for each value: docs/s2_features.md
+
+forecast_cutoff_hour: 6      # forecasts are made at 06:00 on the origin day, using data
+                             # that arrived before then
+horizons: [1, 14]            # predict origin+1 .. origin+14 (direct strategy)
+first_origin: "2023-03-01"   # after an 8-week warm-up for lags
+asof_window_days: 21         # days after shipping during which late rows / corrections
+                             # can still change a day's total (verified in tests)
+master_data_notice_days: 28  # new contracts and terminations are known this long before
+                             # onboard / churn date
+flag_known_after_days: 1     # a validation flag for day d is available from origin d+2
+history_end: "2025-12-31"    # targets up to here = history (S3 training/backtesting);
+                             # later targets = live period (S7/S8)
+# Promotion windows, as offset = in-store start - target day, from the lead experiment
+# (reports/features/promo_lead.json, estimated on 2023-03..2024-08 only):
+promo_lift_offsets: [-7, 8]    # outbound lifted from 8 days before to 7 days after start
+promo_post_offsets: [-16, -8]  # post-promotion dip

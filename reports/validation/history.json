@@ -1,0 +1,271 @@
+{
+ "batch": "history",
+ "status": "warn",
+ "rows_in": 193775,
+ "rows_clean": 193051,
+ "exact_duplicates_dropped": 396,
+ "superseded_by_correction": 595,
+ "quarantined": 328,
+ "quarantine_rate": 0.00169,
+ "quarantine_reasons": {
+  "customer_id:isin": 95,
+  "pallets:greater_than": 89,
+  "order_before_ship": 52,
+  "site_customer_pair_known": 52,
+  "site_id:not_nullable": 21,
+  "customer_id:not_nullable": 19
+ },
+ "errors": [],
+ "warnings_by_type": {
+  "missing_operating_day": 33,
+  "volume_low": 7,
+  "volume_high": 1
+ },
+ "warnings": [
+  {
+   "type": "missing_operating_day",
+   "site_id": "S01",
+   "date": "2023-01-18"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S01",
+   "date": "2023-01-19"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S01",
+   "date": "2023-01-20"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S01",
+   "date": "2023-03-24"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S01",
+   "date": "2023-05-22"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S01",
+   "date": "2023-05-23"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S01",
+   "date": "2023-05-24"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S01",
+   "date": "2024-06-22"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S01",
+   "date": "2024-06-24"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S01",
+   "date": "2024-06-25"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S01",
+   "date": "2025-06-14"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S02",
+   "date": "2024-02-02"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S02",
+   "date": "2024-02-03"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S02",
+   "date": "2024-02-04"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S02",
+   "date": "2024-05-23"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S02",
+   "date": "2024-05-24"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S02",
+   "date": "2024-09-07"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S02",
+   "date": "2024-09-08"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S02",
+   "date": "2025-12-03"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S02",
+   "date": "2025-12-04"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S03",
+   "date": "2023-07-13"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S03",
+   "date": "2023-07-14"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S03",
+   "date": "2024-11-29"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S03",
+   "date": "2024-11-30"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S03",
+   "date": "2024-12-02"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S03",
+   "date": "2024-12-16"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S03",
+   "date": "2024-12-17"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S03",
+   "date": "2024-12-18"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S04",
+   "date": "2023-07-27"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S04",
+   "date": "2023-07-28"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S04",
+   "date": "2023-07-29"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S04",
+   "date": "2024-10-21"
+  },
+  {
+   "type": "missing_operating_day",
+   "site_id": "S04",
+   "date": "2025-11-19"
+  },
+  {
+   "type": "volume_low",
+   "site_id": "S01",
+   "date": "2024-01-20",
+   "pallets": 78,
+   "ref_median": 304,
+   "ratio": 0.257,
+   "gap_share": 0.225,
+   "near_holiday": false
+  },
+  {
+   "type": "volume_low",
+   "site_id": "S02",
+   "date": "2025-01-08",
+   "pallets": 435,
+   "ref_median": 2057,
+   "ratio": 0.211,
+   "gap_share": 0.711,
+   "near_holiday": false
+  },
+  {
+   "type": "volume_low",
+   "site_id": "S02",
+   "date": "2023-09-08",
+   "pallets": 403,
+   "ref_median": 1734,
+   "ratio": 0.232,
+   "gap_share": 0.689,
+   "near_holiday": false
+  },
+  {
+   "type": "volume_high",
+   "site_id": "S02",
+   "date": "2025-11-15",
+   "pallets": 2582,
+   "ref_median": 825,
+   "ratio": 3.13,
+   "gap_share": 0.839,
+   "near_holiday": false
+  },
+  {
+   "type": "volume_low",
+   "site_id": "S03",
+   "date": "2025-09-24",
+   "pallets": 730,
+   "ref_median": 1900,
+   "ratio": 0.384,
+   "gap_share": 0.599,
+   "near_holiday": false
+  },
+  {
+   "type": "volume_low",
+   "site_id": "S04",
+   "date": "2023-06-05",
+   "pallets": 150,
+   "ref_median": 1222,
+   "ratio": 0.123,
+   "gap_share": 0.916,
+   "near_holiday": false
+  },
+  {
+   "type": "volume_low",
+   "site_id": "S04",
+   "date": "2025-09-15",
+   "pallets": 158,
+   "ref_median": 1239,
+   "ratio": 0.127,
+   "gap_share": 0.959,
+   "near_holiday": false
+  },
+  {
+   "type": "volume_low",
+   "site_id": "S04",
+   "date": "2024-11-30",
+   "pallets": 83,
+   "ref_median": 246,
+   "ratio": 0.337,
+   "gap_share": 0.104,
+   "near_holiday": false
+  }
+ ]
+}

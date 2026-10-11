@@ -1,0 +1,110 @@
+schema: '2.0'
+stages:
+  generate:
+    cmd: python -m palletcast.data.make_dataset --config configs/data.yaml --out 
+      data
+    deps:
+    - path: configs/data.yaml
+      hash: md5
+      md5: 8546afdbbbb1377438d134235cc3c4a3
+      size: 5430
+    - path: src/palletcast/data/faults.py
+      hash: md5
+      md5: 9252ec0080c614d0aecd86345dca54fc
+      size: 6337
+    - path: src/palletcast/data/make_dataset.py
+      hash: md5
+      md5: da28b4c818628e7551496c5d33db6631
+      size: 2136
+    - path: src/palletcast/data/simulate.py
+      hash: md5
+      md5: b9cf750e492e762d3bf39fe13bb8d383
+      size: 16545
+    outs:
+    - path: data/raw
+      hash: md5
+      md5: 1f860287c38f717c9a171f60cd69ded8.dir
+      size: 6910849
+      nfiles: 14
+    - path: data/sim_truth
+      hash: md5
+      md5: 62ecb73c78210f2f63f77cbdcf801b96.dir
+      size: 7310050
+      nfiles: 4
+  validate:
+    cmd: python -m palletcast.data.validate --config configs/data.yaml --raw 
+      data/raw --out data/validated --reports reports/validation
+    deps:
+    - path: configs/data.yaml
+      hash: md5
+      md5: 8546afdbbbb1377438d134235cc3c4a3
+      size: 5430
+    - path: data/raw
+      hash: md5
+      md5: 1f860287c38f717c9a171f60cd69ded8.dir
+      size: 6910849
+      nfiles: 14
+    - path: src/palletcast/data/schemas.py
+      hash: md5
+      md5: a896c9ed4c4ab883e4b24eacaf887070
+      size: 3884
+    - path: src/palletcast/data/validate.py
+      hash: md5
+      md5: 6df145ca131481f202177940e313c6f9
+      size: 17873
+    outs:
+    - path: data/validated
+      hash: md5
+      md5: e73e2c9f890e72693d9910f8cdfc19fa.dir
+      size: 12773887
+      nfiles: 8
+    - path: reports/validation
+      hash: md5
+      md5: ea235f3b7f47f82f72b7a3a2975e038f.dir
+      size: 10624
+      nfiles: 11
+  promo_lead:
+    cmd: python -m palletcast.features.promo_lead --validated data/validated --out 
+      reports/features
+    deps:
+    - path: data/validated
+      hash: md5
+      md5: e73e2c9f890e72693d9910f8cdfc19fa.dir
+      size: 12773887
+      nfiles: 8
+    - path: src/palletcast/features/promo_lead.py
+      hash: md5
+      md5: 266efe5fd235e8eb094759bc0d781179
+      size: 3533
+    outs:
+    - path: reports/features/promo_lead.json
+      hash: md5
+      md5: 678665a546653a8d3b0ed03ad79dd41b
+      size: 4144
+  features:
+    cmd: python -m palletcast.features.build --config configs/features.yaml 
+      --validated data/validated --out data/features
+    deps:
+    - path: configs/features.yaml
+      hash: md5
+      md5: ff45c39331adf53c715192dda9ff48bb
+      size: 1216
+    - path: data/validated
+      hash: md5
+      md5: e73e2c9f890e72693d9910f8cdfc19fa.dir
+      size: 12773887
+      nfiles: 8
+    - path: src/palletcast/features/asof.py
+      hash: md5
+      md5: fc9a6590b89bb42303330f5bfd859069
+      size: 2191
+    - path: src/palletcast/features/build.py
+      hash: md5
+      md5: 6a1d7588e712f7c19e64ecf7a3cd3228
+      size: 17868
+    outs:
+    - path: data/features
+      hash: md5
+      md5: ca83c33012f29bace4d2cac2b476070c.dir
+      size: 12284300
+      nfiles: 3

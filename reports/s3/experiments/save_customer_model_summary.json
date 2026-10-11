@@ -1,0 +1,11 @@
+{
+ "summary": [
+  {
+   "variant": "lightgbm_customer",
+   "wape": 0.10817,
+   "bias": -0.02236,
+   "wape_peak": 0.16479,
+   "wape_seed_sd": 0.00019
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "run_date": "2026-01-01",
+ "holdout": [
+  "2025-11-13",
+  "2025-12-11"
+ ],
+ "candidate": {
+  "wape": 0.38312198334841224,
+  "bias": -0.12307134084177734,
+  "wape_peak": 0.4408736732101587,
+  "n": 1330
+ },
+ "production_version": 1,
+ "production": {
+  "wape": 0.13802243211079576,
+  "bias": -0.010657754148024385,
+  "wape_peak": 0.20588452184896033,
+  "n": 1330
+ },
+ "wape_ok": false,
+ "bias_ok": false,
+ "promote": false,
+ "reason": "candidate worse than production"
+}

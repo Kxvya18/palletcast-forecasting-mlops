@@ -1,0 +1,85 @@
+{
+ "batches": [
+  {
+   "batch": "history",
+   "status": "warn",
+   "rows_in": 193775,
+   "quarantined": 328,
+   "warnings_by_type": {
+    "missing_operating_day": 33,
+    "volume_low": 7,
+    "volume_high": 1
+   }
+  },
+  {
+   "batch": "live-2026-01",
+   "status": "pass",
+   "rows_in": 5901,
+   "quarantined": 16,
+   "warnings_by_type": {}
+  },
+  {
+   "batch": "live-2026-02",
+   "status": "pass",
+   "rows_in": 5425,
+   "quarantined": 12,
+   "warnings_by_type": {}
+  },
+  {
+   "batch": "live-2026-03",
+   "status": "pass",
+   "rows_in": 6348,
+   "quarantined": 10,
+   "warnings_by_type": {}
+  },
+  {
+   "batch": "live-2026-04",
+   "status": "pass",
+   "rows_in": 6404,
+   "quarantined": 14,
+   "warnings_by_type": {}
+  },
+  {
+   "batch": "live-2026-05",
+   "status": "warn",
+   "rows_in": 6206,
+   "quarantined": 10,
+   "warnings_by_type": {
+    "volume_low": 1
+   }
+  },
+  {
+   "batch": "live-2026-06",
+   "status": "pass",
+   "rows_in": 6607,
+   "quarantined": 12,
+   "warnings_by_type": {}
+  },
+  {
+   "batch": "live-2026-07",
+   "status": "pass",
+   "rows_in": 6797,
+   "quarantined": 17,
+   "warnings_by_type": {}
+  },
+  {
+   "batch": "live-2026-08",
+   "status": "pass",
+   "rows_in": 6146,
+   "quarantined": 14,
+   "warnings_by_type": {}
+  },
+  {
+   "batch": "live-2026-09",
+   "status": "pass",
+   "rows_in": 6810,
+   "quarantined": 16,
+   "warnings_by_type": {}
+  }
+ ],
+ "status": "pass",
+ "rows_validated": 248729,
+ "rows_quarantined": 449,
+ "validated_hash": "9938c205acecbcfb",
+ "last_ship_date": "2026-09-30"
+}

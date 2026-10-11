@@ -1,0 +1,117 @@
+{
+ "frozen_model_version": 7,
+ "alerts": [
+  {
+   "site_id": "S01",
+   "month": "2026-07",
+   "wape": 0.08205071185316626,
+   "bias": -0.024180787306088674,
+   "drift_share": 0.6666666666666666,
+   "drifted": "target,sw_mean4,mean_28,trend_28,promo_lift_share_price_cut,promo_lift_share_multibuy"
+  },
+  {
+   "site_id": "S01",
+   "month": "2026-08",
+   "wape": 0.11266176739426989,
+   "bias": -0.07661411196358055,
+   "drift_share": 0.4444444444444444,
+   "drifted": "target,trend_28,promo_lift_share_price_cut,promo_lift_share_multibuy"
+  },
+  {
+   "site_id": "S01",
+   "month": "2026-09",
+   "wape": 0.09091771472355446,
+   "bias": 0.00791210209712836,
+   "drift_share": 0.6666666666666666,
+   "drifted": "target,sw_mean4,mean_28,trend_28,promo_lift_share_price_cut,promo_lift_share_multibuy"
+  },
+  {
+   "site_id": "S02",
+   "month": "2026-04",
+   "wape": 0.14852298383509877,
+   "bias": -0.13196588084766173,
+   "drift_share": 1.0,
+   "drifted": "target,sw_mean4,mean_28,trend_28,promo_lift_share_price_cut,promo_lift_share_multibuy,days_to_holiday,n_active_customers,n_new_customers_90"
+  },
+  {
+   "site_id": "S02",
+   "month": "2026-05",
+   "wape": 0.11896534398921957,
+   "bias": -0.08838442756244314,
+   "drift_share": 0.6666666666666666,
+   "drifted": "target,sw_mean4,mean_28,trend_28,n_active_customers,n_new_customers_90"
+  },
+  {
+   "site_id": "S02",
+   "month": "2026-06",
+   "wape": 0.09591550677857065,
+   "bias": -0.06287634780767216,
+   "drift_share": 0.7777777777777778,
+   "drifted": "target,sw_mean4,mean_28,trend_28,promo_lift_share_price_cut,promo_lift_share_multibuy,n_active_customers"
+  },
+  {
+   "site_id": "S02",
+   "month": "2026-07",
+   "wape": 0.1055602082188041,
+   "bias": -0.039876418251692414,
+   "drift_share": 0.7777777777777778,
+   "drifted": "target,sw_mean4,mean_28,trend_28,promo_lift_share_price_cut,promo_lift_share_multibuy,n_active_customers"
+  },
+  {
+   "site_id": "S02",
+   "month": "2026-08",
+   "wape": 0.10065040671397106,
+   "bias": 0.02194327416758728,
+   "drift_share": 0.6666666666666666,
+   "drifted": "target,sw_mean4,mean_28,trend_28,promo_lift_share_multibuy,n_active_customers"
+  },
+  {
+   "site_id": "S02",
+   "month": "2026-09",
+   "wape": 0.11434301169758206,
+   "bias": -0.009958102520400327,
+   "drift_share": 0.6666666666666666,
+   "drifted": "target,sw_mean4,mean_28,promo_lift_share_price_cut,promo_lift_share_multibuy,n_active_customers"
+  },
+  {
+   "site_id": "S03",
+   "month": "2026-04",
+   "wape": 0.1388251636319722,
+   "bias": -0.08790961834321523,
+   "drift_share": 0.7777777777777778,
+   "drifted": "target,sw_mean4,mean_28,trend_28,promo_lift_share_price_cut,promo_lift_share_multibuy,n_new_customers_90"
+  },
+  {
+   "site_id": "S03",
+   "month": "2026-05",
+   "wape": 0.11787657435583708,
+   "bias": -0.037592926415679066,
+   "drift_share": 0.5555555555555556,
+   "drifted": "sw_mean4,mean_28,trend_28,promo_lift_share_price_cut,promo_lift_share_multibuy"
+  },
+  {
+   "site_id": "S04",
+   "month": "2026-05",
+   "wape": 0.0744072722762391,
+   "bias": 0.04873626580966721,
+   "drift_share": 0.6666666666666666,
+   "drifted": "sw_mean4,mean_28,trend_28,promo_lift_share_price_cut,promo_lift_share_multibuy,n_active_customers"
+  },
+  {
+   "site_id": "S04",
+   "month": "2026-06",
+   "wape": 0.16559275829388626,
+   "bias": 0.11901955765231688,
+   "drift_share": 0.3333333333333333,
+   "drifted": "mean_28,trend_28,promo_lift_share_multibuy"
+  },
+  {
+   "site_id": "S04",
+   "month": "2026-09",
+   "wape": 0.12419288459739894,
+   "bias": -0.08308698630535445,
+   "drift_share": 0.4444444444444444,
+   "drifted": "trend_28,promo_lift_share_price_cut,promo_lift_share_multibuy,days_to_holiday"
+  }
+ ]
+}

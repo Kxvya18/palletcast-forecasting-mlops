@@ -1,0 +1,22 @@
+# S4 model registry and promotion gate. Rationale: docs/s4_s5_registry_orchestration.md
+
+model_name: outbound_forecaster
+label_settle_days: 21        # train only on labels that are final at run time
+holdout_days: 28             # gate compares models on the most recent settled 4 weeks
+
+# A model = a list of members; site forecasts are the weighted sum of member forecasts.
+# grain: site | customer (customer forecasts are summed to sites)
+# ratio: predict target / recent level instead of pallets (S3 experiment E6)
+models:
+  production_candidate:
+    - {grain: customer, algo: lightgbm, params: lightgbm_customer, ratio: false, weight: 1.0}
+  challenger_ensemble:        # best on the S3 tuning quarter
+    - {grain: customer, algo: lightgbm, params: lightgbm_customer, ratio: false, weight: 0.3333}
+    - {grain: site, algo: lightgbm, params: lightgbm, ratio: false, weight: 0.3333}
+    - {grain: site, algo: catboost, params: catboost, ratio: false, weight: 0.3334}
+  challenger_ratio:           # E6: may help when sites grow to record volumes
+    - {grain: site, algo: lightgbm, params: lightgbm, ratio: true, weight: 1.0}
+
+gate:
+  max_wape_increase: 0.003   # candidate may be at most 0.3 points worse than production
+  max_bias_worsening: 0.01   # and its under-forecast at most 1 point deeper

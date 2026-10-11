@@ -1,0 +1,20 @@
+# S7 monitoring. Rationale: docs/s6_s7_serving_monitoring.md
+
+live_months: ["2026-04", "2026-05", "2026-06", "2026-07", "2026-08", "2026-09"]
+frozen_model_alias: production     # the model in use on 2026-04-01 (v7); not retrained in S7
+
+alerts:
+  max_wape: 0.16        # ~1.5x the S3 test error (10.8%) for a site-month
+  max_abs_bias: 0.07    # over/under-forecasting by more than 7% of volume in a site-month
+  max_drift_share: 0.5  # more than half of the monitored columns drifted vs the same month a year ago
+
+drift_columns: [target, sw_mean4, mean_28, trend_28, n_active_customers, n_new_customers_90,
+                promo_lift_share_price_cut, promo_lift_share_multibuy, days_to_holiday]
+challengers_from: "2026-01-01"     # challengers and v2 were all trained for this date
+
+# S8 retraining experiment
+retraining:
+  start: "2026-04-01"                # production v7 is in use from here
+  end: "2026-09-30"
+  weekly_alert: {max_wape: 0.18, max_abs_bias: 0.10}   # one week is noisier than a month
+  min_days_between_retrains: 14

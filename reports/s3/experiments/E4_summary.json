@@ -1,0 +1,18 @@
+{
+ "summary": [
+  {
+   "variant": "squared_error",
+   "wape": 0.12437,
+   "bias": -0.03343,
+   "wape_peak": 0.1858,
+   "wape_seed_sd": 0.00049
+  },
+  {
+   "variant": "tweedie",
+   "wape": 0.12329,
+   "bias": -0.04108,
+   "wape_peak": 0.189,
+   "wape_seed_sd": 0.00034
+  }
+ ]
+}

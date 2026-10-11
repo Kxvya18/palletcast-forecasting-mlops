@@ -1,0 +1,18 @@
+{
+ "summary": [
+  {
+   "variant": "monthly",
+   "wape": 0.1199,
+   "bias": -0.03156,
+   "wape_peak": 0.1857,
+   "wape_seed_sd": 0.00056
+  },
+  {
+   "variant": "quarterly",
+   "wape": 0.12437,
+   "bias": -0.03343,
+   "wape_peak": 0.1858,
+   "wape_seed_sd": 0.00049
+  }
+ ]
+}

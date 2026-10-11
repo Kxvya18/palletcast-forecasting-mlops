@@ -1,0 +1,10 @@
+._*
+.DS_Store
+__pycache__/
+.venv/
+data/
+mlruns/
+mlflow.db
+runs/
+serving_model/
+catboost_info/

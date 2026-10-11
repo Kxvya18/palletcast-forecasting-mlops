@@ -1,0 +1,44 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  fast:
+    name: lint + fast tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --frozen
+      - name: Lint
+        run: uv run ruff check .
+      - name: Fast tests (backtest metrics, promotion gate, drift parsing)
+        run: uv run pytest -q tests/test_models.py tests/test_registry.py tests/test_monitoring.py
+
+  pipeline:
+    name: data + feature pipeline tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --frozen
+      - name: Simulate, validate and build features at full size; check faults and leakage
+        run: uv run pytest -q tests/test_simulate.py tests/test_validation.py tests/test_features.py
+
+  docker:
+    name: service image builds
+    needs: fast
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # the real model is exported from the registry at release time; CI only checks that
+      # the image (code + core dependencies) builds
+      - run: mkdir -p serving_model
+      - run: docker build -t palletcast-forecast:ci .

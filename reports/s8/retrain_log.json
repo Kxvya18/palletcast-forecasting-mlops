@@ -1,0 +1,98 @@
+[
+ {
+  "policy": "monthly",
+  "date": "2026-04-06",
+  "reason": "first Monday of the month",
+  "promoted": true
+ },
+ {
+  "policy": "monthly",
+  "date": "2026-05-04",
+  "reason": "first Monday of the month",
+  "promoted": true
+ },
+ {
+  "policy": "monthly",
+  "date": "2026-06-01",
+  "reason": "first Monday of the month",
+  "promoted": true
+ },
+ {
+  "policy": "monthly",
+  "date": "2026-07-06",
+  "reason": "first Monday of the month",
+  "promoted": false
+ },
+ {
+  "policy": "monthly",
+  "date": "2026-08-03",
+  "reason": "first Monday of the month",
+  "promoted": true
+ },
+ {
+  "policy": "monthly",
+  "date": "2026-09-07",
+  "reason": "first Monday of the month",
+  "promoted": true
+ },
+ {
+  "policy": "triggered",
+  "date": "2026-04-20",
+  "reason": "S02 wape 0.174 bias -0.141",
+  "promoted": true
+ },
+ {
+  "policy": "triggered",
+  "date": "2026-05-11",
+  "reason": "S01 wape 0.175 bias +0.174",
+  "promoted": false
+ },
+ {
+  "policy": "triggered",
+  "date": "2026-05-25",
+  "reason": "S01 wape 0.134 bias +0.130",
+  "promoted": true
+ },
+ {
+  "policy": "triggered",
+  "date": "2026-06-08",
+  "reason": "S04 wape 0.176 bias +0.175",
+  "promoted": false
+ },
+ {
+  "policy": "triggered",
+  "date": "2026-06-22",
+  "reason": "S04 wape 0.210 bias +0.210",
+  "promoted": true
+ },
+ {
+  "policy": "triggered",
+  "date": "2026-07-13",
+  "reason": "S02 wape 0.116 bias +0.108",
+  "promoted": true
+ },
+ {
+  "policy": "triggered",
+  "date": "2026-08-10",
+  "reason": "S02 wape 0.173 bias +0.120",
+  "promoted": true
+ },
+ {
+  "policy": "triggered",
+  "date": "2026-08-24",
+  "reason": "S01 wape 0.169 bias -0.169",
+  "promoted": false
+ },
+ {
+  "policy": "triggered",
+  "date": "2026-09-07",
+  "reason": "S02 wape 0.146 bias +0.146",
+  "promoted": true
+ },
+ {
+  "policy": "triggered",
+  "date": "2026-09-21",
+  "reason": "S04 wape 0.141 bias -0.136",
+  "promoted": false
+ }
+]
